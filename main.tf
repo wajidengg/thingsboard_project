@@ -39,7 +39,7 @@ resource "aws_instance" "thingsboard_ec2" {
   ami           = "ami-0c02fb55956c7d316" 
   instance_type = "t2.micro"             
   key_name      = "vockey"               
-  security_groups = [aws_security_group.thingsboard_sg.name]
+  security_group_ids     = [aws_security_group.thingsboard_sg.id]
 
   user_data = file("scripts/install_thingsboard.sh") 
 
