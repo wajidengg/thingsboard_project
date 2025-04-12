@@ -23,7 +23,7 @@ wget https://github.com/thingsboard/thingsboard/releases/download/v3.9.1/thingsb
 sudo dpkg -i thingsboard-3.9.1.deb
 
 # Configure ThingsBoard
-sudo tee -a /etc/thingsboard/conf/thingsboard.conf > /dev/null <<EOF
+sudo tee -a /etc/thingsboard/conf/thingsboard.conf <<EOF
 export DATABASE_TS_TYPE=sql
 export SPRING_DATASOURCE_URL=jdbc:postgresql://localhost:5432/thingsboard
 export SPRING_DATASOURCE_USERNAME=postgres
