@@ -8,7 +8,7 @@ sudo apt install -y openjdk-17-jdk
 
 # Automated repository configuration:
 sudo apt install -y postgresql-common
-sudo /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh
+sudo /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh -y
 
 # install and launch the postgresql service:
 sudo apt update
