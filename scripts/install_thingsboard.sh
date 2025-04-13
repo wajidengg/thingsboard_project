@@ -4,15 +4,16 @@ set -x
 
 # Update and install prerequisites
 sudo apt update -y
-sudo apt install -y openjdk-17-jdk wget nano postgresql-common
+sudo apt install -y openjdk-17-jdk 
 
-# Install PostgreSQL 16 repo and database
+# Automated repository configuration:
+sudo apt install -y postgresql-common
 sudo /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh
-sudo apt update -y
-sudo apt install -y postgresql-16
 
-# Start PostgreSQL service
-sudo systemctl start postgresql
+# install and launch the postgresql service:
+sudo apt update
+sudo apt -y install postgresql-16
+sudo service postgresql start
 
 # Set password and create database
 sudo -u postgres psql -c "ALTER USER postgres PASSWORD 'Thingsboard@123';"
@@ -41,5 +42,4 @@ sudo ./bin/install/install.sh --loadDemo
 sudo systemctl daemon-reload
 sudo systemctl start thingsboard
 sudo systemctl enable thingsboard
-
-echo "ThingsBoard installation complete! Access it at http://$(curl -s http://169.254.169.254/latest/meta-data/public-ipv4):8080"
+sudo systemctl status thingsboard

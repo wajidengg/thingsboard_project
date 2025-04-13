@@ -48,13 +48,14 @@ resource "aws_security_group" "thingsboard_sg" {
 }
 
 resource "aws_instance" "thingsboard_ec2" {
-  ami                    = "ami-0c02fb55956c7d316" # Ubuntu 22.04 LTS (HVM), SSD
+  ami                    = "ami-0f9de6e2d2f067fca" 
   instance_type          = "t2.medium"
   key_name               = "vockey" 
   vpc_security_group_ids = [aws_security_group.thingsboard_sg.id]
+  subnet_id              = "subnet-0eab217423de0f958"
   associate_public_ip_address = true 
 
-  user_data = file("scripts/install_thingsboard.sh") # Your installation script path
+  user_data = file("scripts/install_thingsboard.sh") 
 
   tags = {
     Name = "ThingsBoard"
