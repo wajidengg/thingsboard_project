@@ -3,9 +3,9 @@ import time
 import json
 
 # Replace with your ThingsBoard server's public IP or domain
-THINGSBOARD_HOST = "your-thingsboard-public-ip"
+THINGSBOARD_HOST = "18.207.113.234"
 # Replace with your device's access token
-ACCESS_TOKEN = "your-device-access-token"
+ACCESS_TOKEN = "ngkfsuf1smn1g0dy0mkx"
 
 # MQTT topic for telemetry data
 TOPIC = "v1/devices/me/telemetry"
