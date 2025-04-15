@@ -31,8 +31,8 @@ This project automates the deployment of a ThingsBoard server on an AWS EC2 inst
 ### Step 1: Clone the Repository
 Clone this repository to your local machine:
 ```bash
-git clone https://github.com/<your-username>/<your-repo>.git
-cd <your-repo>
+git clone https://github.com/wajidengg/thingsboard_project.git
+cd thingsboard_project
 ```
 
 ---
@@ -71,8 +71,8 @@ Provide any required variable values if prompted.
    ```
 2. Open the URL in your browser to access the ThingsBoard UI.
 3. Use the default login credentials:
-   - **Username**: `sysadmin@thingsboard.org`
-   - **Password**: `sysadmin`
+   - **Username**: `tenant@thingsboard.org`
+   - **Password**: `tenant`
 
 ---
 
@@ -80,7 +80,7 @@ Provide any required variable values if prompted.
 
 The following ports are opened in the security group:
 - **22**: SSH
-- **80**: HTTP (Nginx)
+- **80**: HTTP 
 - **8080**: ThingsBoard UI
 - **1883**: MQTT
 - **5683**: CoAP
