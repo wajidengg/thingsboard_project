@@ -2,10 +2,10 @@ import paho.mqtt.client as mqtt
 import time
 import json
 
-# Replace with your ThingsBoard server's public IP or domain
-THINGSBOARD_HOST = "18.207.113.234"
-# Replace with your device's access token
-ACCESS_TOKEN = "ngkfsuf1smn1g0dy0mkx"
+# Replace with ThingsBoard server's public IP or domain
+THINGSBOARD_HOST = "3.94.198.187"
+# Replace with device's access token
+ACCESS_TOKEN = "hsTurYnDomH7SvQARUuD"
 
 # MQTT topic for telemetry data
 TOPIC = "v1/devices/me/telemetry"
@@ -14,7 +14,7 @@ TOPIC = "v1/devices/me/telemetry"
 def get_telemetry_data():
     return {
         "temperature": 25.0 + (5 * time.time() % 10),  # Simulate fluctuating temperature
-        "humidity": 60 + (2 * time.time() % 10)      # Simulate fluctuating humidity
+        "humidity": 60 + (5 * time.time() % 10)      # Simulate fluctuating humidity
     }
 
 # Callback for successful connection
